@@ -119,113 +119,113 @@ PRODUCT_COPY_FILES += \
     hardware/qcom/audio/configs/msm8998/listen_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/listen_platform_info.xml
 
 # Reduce client buffer size for fast audio output tracks
-PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    af.fast_track_multiplier=1
 
 # Low latency audio buffer size in frames
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.audio_hal.period_size=192
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    vendor.audio_hal.period_size=192
 
 ##fluencetype can be "fluence" or "fluencepro" or "none"
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.audio.sdk.fluencetype=none\
-persist.vendor.audio.fluence.voicecall=true\
-persist.vendor.audio.fluence.voicerec=false\
-persist.vendor.audio.fluence.speaker=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#ro.vendor.audio.sdk.fluencetype=none\
+#persist.vendor.audio.fluence.voicecall=true\
+#persist.vendor.audio.fluence.voicerec=false\
+#persist.vendor.audio.fluence.speaker=true
 
 #disable tunnel encoding
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.tunnel.encode=false
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.tunnel.encode=false
 
 #Disable RAS Feature by default
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.audio.ras.enabled=false
+#PRODUCT_PROPERTY_OVERRIDES += \
+#persist.vendor.audio.ras.enabled=false
 
 #Buffer size in kbytes for compress offload playback
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.offload.buffer.size.kb=32
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.offload.buffer.size.kb=32
 
 #Enable offload audio video playback by default
-PRODUCT_PROPERTY_OVERRIDES += \
-audio.offload.video=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#audio.offload.video=true
 
 #Enable audio track offload by default
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.offload.track.enable=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.offload.track.enable=true
 
 #Enable music through deep buffer
-PRODUCT_PROPERTY_OVERRIDES += \
-audio.deep_buffer.media=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#audio.deep_buffer.media=true
 
 #enable voice path for PCM VoIP by default
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.voice.path.for.pcm.voip=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.voice.path.for.pcm.voip=true
 
 #Enable multi channel aac through offload
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.offload.multiaac.enable=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.offload.multiaac.enable=true
 
 #Enable DS2, Hardbypass feature for Dolby
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.dolby.ds2.enabled=false\
-vendor.audio.dolby.ds2.hardbypass=false
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.dolby.ds2.enabled=false\
+#vendor.audio.dolby.ds2.hardbypass=false
 
 #Disable Multiple offload sesison
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.offload.multiple.enabled=false
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.offload.multiple.enabled=false
 
 #Disable Compress passthrough playback
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.offload.passthrough=false
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.offload.passthrough=false
 
 #Disable surround sound recording
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.audio.sdk.ssr=false
+#PRODUCT_PROPERTY_OVERRIDES += \
+#ro.vendor.audio.sdk.ssr=false
 
 #enable dsp gapless mode by default
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.offload.gapless.enabled=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.offload.gapless.enabled=true
 
 #enable pbe effects
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.safx.pbe.enabled=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.safx.pbe.enabled=true
 
 #parser input buffer size(256kb) in byte stream mode
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.parser.ip.buffer.size=262144
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.parser.ip.buffer.size=262144
 
 #flac sw decoder 24 bit decode capability
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.flac.sw.decoder.24bit=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.flac.sw.decoder.24bit=true
 
 #split a2dp DSP supported encoder list
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
+#PRODUCT_PROPERTY_OVERRIDES += \
+#persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac
 
 #enable software decoders for ALAC and APE
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.use.sw.alac.decoder=true
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.use.sw.ape.decoder=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.use.sw.alac.decoder=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.use.sw.ape.decoder=true
 
 #enable hw aac encoder by default
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.hw.aac.encoder=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.hw.aac.encoder=true
 
 #audio becoming noisy intent broadcast delay
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.noisy.broadcast.delay=600
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.noisy.broadcast.delay=600
 
 #offload pausetime out duration to 3 secs to inline with other outputs
-PRODUCT_PROPERTY_OVERRIDES += \
-vendor.audio.offload.pstimeout.secs=3
+#PRODUCT_PROPERTY_OVERRIDES += \
+#vendor.audio.offload.pstimeout.secs=3
 
 #Set AudioFlinger client heap size
-PRODUCT_PROPERTY_OVERRIDES += \
-ro.af.client_heap_size_kbyte=7168
+#PRODUCT_PROPERTY_OVERRIDES += \
+#ro.af.client_heap_size_kbyte=7168
 
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.vendor.audio.hw.binder.size_kbyte=1024
+#PRODUCT_PROPERTY_OVERRIDES += \
+#persist.vendor.audio.hw.binder.size_kbyte=1024
 
 # for HIDL related packages
 PRODUCT_PACKAGES += \
